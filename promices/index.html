@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .wrapper {
+      outline: 1px solid red;
+      width: 90%;
+      margin: 10px auto;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .wrapper__item {
+      outline: 1px solid red;
+      flex: 1 1 33%;
+    }
+
+    @media (max-width: 900px) {
+      .wrapper__item {
+        outline: 1px solid red;
+        flex: 1 1 50%;
+      }
+      .three {
+        flex: 1 1 100%;
+      }
+    }
+
+
+    @media (max-width: 600px) {
+      .wrapper__item {
+        outline: 1px solid red;
+        flex: 1 1 100%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="wrapper__item one">1</div>
+    <div class="wrapper__item two">2</div>
+    <div class="wrapper__item three">3</div>
+    
+  </div>
+  <script>
+      document.cookie = 'full';
+      console.log(document.cookie); 
+      // const button = document.createElement('button');
+      // button.innerHTML = 'Click';
+      // document.cookie = 'full';
+      // button.addEventListener('click', (e) => {
+      //   e.preventDefault();
+      //   document.cookie = 'full';
+      //   console.log(document.cookie);
+      // });
+      // if(!document.cookie) {
+      //   const wrapper = document.querySelector('.wrapper');
+      //   wrapper.appendChild(button);
+      // }
+
+  </script>
+</body>
+</html>

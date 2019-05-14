@@ -1,0 +1,7 @@
+.cell {
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid tan;
+  padding: 15px 15px 10px;
+  cursor: pointer;
+}

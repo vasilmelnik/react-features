@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <script>
+    const debounce = (func, delay) => {
+      var temp;
+      return (...args) => {
+        if(temp) {
+          clearTimeout(temp);
+        }
+
+        temp = setTimeout(() => func.apply(this, args), delay);
+      }
+    };
+
+    const throttle = (func, delay) => {
+      var temp;
+      return (...args) => {
+        if(temp) {
+          return false
+        }
+
+        temp = true;
+        func.apply(this, args);
+
+        setTimeout(() => temp = false, delay);
+      }
+    };
+    
+    window.onkeypress = debounce(e => console.log(e.key), 1000);
+
+  </script>
+</body>
+</html>
